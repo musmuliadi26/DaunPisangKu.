@@ -1,0 +1,228 @@
+/*google font*/
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Quicksand&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+   font-family: 'Quicksand', sans-serif;
+}
+
+header {
+   display: inline;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	position: sticky;
+   	top: 0;
+   	background: white;
+   	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav .mainMenu {
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+
+nav .mainMenu li a {
+	display: inline-block;
+	padding: 15px;
+	text-transform: uppercase;
+	color: black;
+	opacity: 0.8;
+}
+
+nav .mainMenu li a:hover {
+	opacity: 1;
+}
+
+nav .openMenu {
+	font-size: 2rem;
+	display: none;
+	cursor: pointer;
+	margin: 5px;
+}
+
+nav .mainMenu .closeMenu{
+	display: none;
+	cursor: pointer;
+	font-size: 2rem;
+}
+
+nav .logo {
+	font-family: 'Kalam', cursive;
+	margin: 6px;
+}
+
+nav  .mainMenu .login {
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 8px 15px;
+}
+
+nav  .mainMenu .login:hover {
+	background-color: #A7D281;
+}
+
+.jumbotron {
+	padding: 120px 10px;
+   background-image: url(../img/bananaleaf4.jpg);
+   background-size: cover;
+   text-align: center;
+   font-weight: bold;
+}
+
+.jumbotron h1 {
+	font-family: 'Kalam', cursive;
+}
+
+.content h1 {
+	text-align: center;
+	padding: 20px;
+}
+
+.menu, .informasi-lain {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#menu {
+	padding-top: 50px;
+}
+
+.menu {
+	justify-content: center;
+}
+
+.informasi {
+	margin :50px 0;
+	background-color: #A7D281;
+	padding-bottom: 50px;
+}
+
+.informasi-lain {
+	justify-content: space-around;
+	align-items: center;
+}
+
+.pesan, .lokasi, .sosial-media{
+	text-align: center;
+	margin: 20px;
+}
+
+.pesan h4 , .lokasi h4, .sosial-media h4{
+	padding: 8px;
+}
+
+.sosial-media h4 a {
+	color: black;
+}
+
+.card {
+	text-align: center;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: #A7D281;
+	margin-bottom: 5px;
+	margin: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+	width: 250px;
+	height: 200px;
+}
+
+.card .harga {
+	padding: 5px;
+}
+
+.card input {
+	margin: 10px;
+	padding: 4px;
+}
+
+.card .kerangjang {
+	padding: 4px 10px;
+	border-radius: 3px;
+	background-color: #334443;
+	color: white;
+}
+
+.card .kerangjang:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+aside {
+	display: flex;
+	justify-content: center;
+}
+
+.profile header h2 {
+	padding: 10px;
+}
+
+.profile header img {
+	border-radius: 100%;
+	padding: 5px;
+}
+
+.profile section {
+	text-align: left;
+}
+
+footer {
+	margin-top: 20px;
+   padding: 20px;
+   background-color: #A7D281;
+   text-align: center;
+   font-weight: bold;
+}
+
+footer p span {
+	font-family: 'Kalam', cursive;
+}
+
+/*responsive breakpoint*/
+
+@media all and (max-width: 800px) {
+	nav .mainMenu {
+		height: 300px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 10;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: top 1s ease;
+		display: none;
+		background-color: whitesmoke;
+	}
+
+	nav .mainMenu .closeMenu {
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	nav .openMenu {
+		display: block;
+	}
+
+	nav .mainMenu li a:hover {
+		opacity: 1;
+	}
+}
